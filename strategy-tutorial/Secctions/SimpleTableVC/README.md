@@ -6,7 +6,7 @@
 
 ```IBOutlet
 @IBOutlet weak var containerForTableView: UIView!
-
+```
 * En NibList puede ir entre comillas dobles el nombre del identificador de la celda
 
 
@@ -16,5 +16,5 @@ internal lazy var tableViewController: GHStrategyTableController = {
     tableViewController.delegate = self
     return tableViewController
 }()
+```
 
-*
