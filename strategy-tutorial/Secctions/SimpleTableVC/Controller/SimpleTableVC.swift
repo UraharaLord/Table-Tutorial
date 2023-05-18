@@ -29,6 +29,7 @@ class SimpleTableVC: UIViewController {
     
     // MARK: - Fill Table
     func setDataSource() {
+        
         self.tableViewController.setSource(listSource: SimpleEntity.init().getDataForTable())
         
         if !self.tableViewController.tableView.isDescendant(of: self.containerForTableView) {

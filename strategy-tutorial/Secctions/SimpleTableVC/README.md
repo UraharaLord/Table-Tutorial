@@ -67,3 +67,19 @@ extension MiModel: GHModelSimpleTableDelegate {
     }
 }
 ```
+
+### Paso 6:
+* En una funcion llamada setDataSource agregamos la informacion a mostrar en la tabla
+* Asignamos su delegado
+* Le agregamos al contenedor de la tabla, el parametro lazy var de tipo GHStrategyTableController
+* Configuramos los contraints de la tabla hacia el contenedor
+
+```
+func setDataSource() {
+    let arrayData = MiModelo.init().getDataForTable()           // Regresa un array que contiene id y description por cada elemento del arreglo
+    self.tableViewController.setSource(listSource: arrayData)   // asignamos el Array a nuestra tabla
+}
+```
+
+### Paso 6:
+* Si todo fue correcto Compilamos y listo una tabla dinamica que puede utilizar cualquier tipo de celda y modelo de datos.
