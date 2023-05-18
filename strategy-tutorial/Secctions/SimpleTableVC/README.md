@@ -51,7 +51,7 @@ extension MiCelda: GHSimpleTableViewCellDelegate {
 
 ### Paso 5:
 * Para poder utilizar cualquier modelo de datos es necesario agregar una extension al modelo
-* de datos donde colocaremos el identificador de nuestra celda
+  de datos donde colocaremos el identificador de nuestra celda
 
 ```
 struct MiModel {
