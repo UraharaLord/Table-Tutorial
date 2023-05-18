@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="plW-GO-xve">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="uKr-6h-XhQ">
+            <objects>
+                <viewController id="plW-GO-xve" customClass="HomeVC" customModule="strategy_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o0g-JZ-AyS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxa-7r-qJw">
+                                <rect key="frame" x="55" y="38" width="264" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="A8l-Jz-4tQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Simple table View"/>
+                                <connections>
+                                    <segue destination="Eal-nB-QMT" kind="show" id="jPM-yB-PUp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wx0-qz-7Sg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wx0-qz-7Sg" firstAttribute="trailing" secondItem="wxa-7r-qJw" secondAttribute="trailing" constant="56" id="KHe-lA-kxQ"/>
+                            <constraint firstItem="wxa-7r-qJw" firstAttribute="leading" secondItem="Wx0-qz-7Sg" secondAttribute="leading" constant="55" id="XXP-tx-mRC"/>
+                            <constraint firstItem="wxa-7r-qJw" firstAttribute="top" secondItem="Wx0-qz-7Sg" secondAttribute="top" constant="38" id="b8v-5m-TfX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeL-vC-Oju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.39999999999998" y="-7.6461769115442282"/>
+        </scene>
+        <!--SimpleTableID-->
+        <scene sceneID="6MW-hV-NxU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SimpleList" referencedIdentifier="SimpleTableID" id="Eal-nB-QMT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LDv-KA-HqK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seg-F4-DRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="-259"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

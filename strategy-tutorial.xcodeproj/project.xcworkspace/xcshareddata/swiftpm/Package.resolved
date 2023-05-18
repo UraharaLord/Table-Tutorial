@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "ghmjolnircore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://git.gonet.us/gnglobaldependencies/ios/ui/ghmjolnircore.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "38459d29555d394feee7a57416fc8e581abc42db"
+      }
+    },
+    {
+      "identity" : "tinyconstraints",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/roberthein/TinyConstraints",
+      "state" : {
+        "revision" : "3262e5c591d4ab6272255df2087a01bbebd138dc",
+        "version" : "4.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
