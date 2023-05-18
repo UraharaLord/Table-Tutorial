@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAC-8E-bYF">
-                                <rect key="frame" x="16" y="102" width="361" height="716"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <rect key="frame" x="16" y="59" width="361" height="695"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdf-WT-zqH">
-                                <rect key="frame" x="268" y="59" width="108" height="35"/>
+                                <rect key="frame" x="104" y="770" width="185" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="7oq-4A-bRE"/>
-                                    <constraint firstAttribute="height" constant="35" id="Gko-rH-lSh"/>
+                                    <constraint firstAttribute="width" constant="185" id="RCp-Lr-AZ3"/>
+                                    <constraint firstAttribute="height" constant="48" id="s19-4O-RNI"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Cerrar"/>
@@ -36,13 +36,12 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lAC-8E-bYF" secondAttribute="trailing" constant="16" id="6hj-L3-Ddu"/>
-                            <constraint firstItem="lAC-8E-bYF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="43" id="N0E-C3-goc"/>
-                            <constraint firstItem="lAC-8E-bYF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Wus-Rp-zbH"/>
-                            <constraint firstItem="lAC-8E-bYF" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="dHT-h4-CS0"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kdf-WT-zqH" secondAttribute="trailing" constant="17" id="fNF-yn-6Yd"/>
-                            <constraint firstItem="kdf-WT-zqH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="onA-pk-oK0"/>
-                            <constraint firstItem="lAC-8E-bYF" firstAttribute="top" secondItem="kdf-WT-zqH" secondAttribute="bottom" constant="8" symbolic="YES" id="tQe-GF-DKh"/>
+                            <constraint firstItem="lAC-8E-bYF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="3dg-hr-MVL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lAC-8E-bYF" secondAttribute="trailing" constant="16" id="AXJ-xb-1TL"/>
+                            <constraint firstItem="lAC-8E-bYF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="MBU-Vl-y9h"/>
+                            <constraint firstItem="kdf-WT-zqH" firstAttribute="top" secondItem="lAC-8E-bYF" secondAttribute="bottom" constant="16" id="kaw-fY-Kxk"/>
+                            <constraint firstItem="kdf-WT-zqH" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="n25-EZ-vy3"/>
+                            <constraint firstItem="kdf-WT-zqH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pgw-gh-aT7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CRq-Lr-qC1"/>
@@ -58,9 +57,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

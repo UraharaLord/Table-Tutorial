@@ -25,7 +25,7 @@ struct SimpleEntity {
         
         let urlStr: String = "https://retos-operaciones-logistica.eae.es/wp-content/uploads/2020/01/proyectos-tecnologicos-600x300.jpg"
         
-        for (index, _) in (1...10).enumerated() {
+        for (index, _) in (1...30).enumerated() {
             array.append(SimpleEntity(id: "\(index)",
                                     icon: urlStr,
                              description: "Elemento número \(index)"))

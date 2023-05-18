@@ -12,4 +12,17 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func simpleTableAct(_ sender: Any) {
+        navigateTo(identifier: "SimpleTableID", method: .present, storyboard: "SimpleList")
+    }
+    
+    @IBAction func pullToRefresh(_ sender: Any) {
+        DispatchQueue.main.async {
+            let sBoard: UIStoryboard = UIStoryboard(name: "SimpleList", bundle: nil)
+            let vctrl = sBoard.instantiateViewController(withIdentifier: "SimpleTableID") as! SimpleTableVC
+                vctrl.refreshControll = true
+            self.present(vctrl, animated: true, completion: nil)
+        }
+    }
 }

@@ -15,8 +15,15 @@ class SimpleTableVC: UIViewController {
     @IBOutlet weak var containerForTableView: UIView!
     
     // MARK: - Properties
+    var refreshControll: Bool = false
+    
     internal lazy var tableViewController: GHStrategyTableController = {
         let tableViewController = GHStrategyTableController(nibList: [ (SimpleCell.id, .main)])
+        
+        if refreshControll {
+            tableViewController.addRefreshControl()
+        }
+        
         tableViewController.delegate = self
         return tableViewController
     }()
@@ -36,10 +43,10 @@ class SimpleTableVC: UIViewController {
             
             self.tableViewController.delegate = self
             self.containerForTableView.addSubview(self.tableViewController.tableView)
-            
             self.tableViewController.tableView.edgesToSuperview()
-            
         }
+        
+        self.tableViewController.endRefreshing()
     }
     
     // MARK: - Action
@@ -52,5 +59,18 @@ extension SimpleTableVC: GHStrategyTableControllerDelegate {
     
     func itemSelected(model: GHModelSimpleTableDelegate) {
         dump(model)
+        
+        guard let model = model as? SimpleEntity else {
+            return
+        }
+        simpleAlert(title: "Atención", message: "\(model.description ?? "") seleccionado")
+    }
+    
+    func fetchRefreshData() {
+        DispatchQueue.main.async {
+            Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
+                self.setDataSource()
+            }
+        }
     }
 }

@@ -78,8 +78,34 @@ extension MiModel: GHModelSimpleTableDelegate {
 func setDataSource() {
     let arrayData = MiModelo.init().getDataForTable()           // Regresa un array que contiene id y description por cada elemento del arreglo
     self.tableViewController.setSource(listSource: arrayData)   // asignamos el Array a nuestra tabla
+    
+    if !self.tableViewController.tableView.isDescendant(of: self.containerForTableView) {
+            
+        self.tableViewController.delegate = self
+        self.containerForTableView.addSubview(self.tableViewController.tableView)
+        self.tableViewController.tableView.edgesToSuperview()
+    }
+        
+    self.tableViewController.endRefreshing() // Este elemento es unicamente si estamos utilizando la propiedad de refresh controll
 }
 ```
 
 ### Paso 6:
 * Si todo fue correcto Compilamos y listo una tabla dinamica que puede utilizar cualquier tipo de celda y modelo de datos.
+
+
+### Agregar: Refresh Control
+* En la variable del paso 2 es necesario agregar la siguiente linea **tableViewController.addRefreshControl()**
+* Quedaria de la siguiente manera
+
+```
+    internal lazy var tableViewController: GHStrategyTableController = {
+        let tableViewController = GHStrategyTableController(nibList: [ (SimpleCell.id, .main)])
+        
+        // Agregamos propiedad de refreshControll
+        tableViewController.addRefreshControl()
+        
+        tableViewController.delegate = self
+        return tableViewController
+    }()
+```
