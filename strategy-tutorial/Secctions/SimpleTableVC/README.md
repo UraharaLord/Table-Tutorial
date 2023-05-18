@@ -32,7 +32,7 @@ extension Viewcontroller: GHStrategyTableControllerDelegate {
 }
 ```
 
-### Paso 3:
+### Paso 4:
 * Creamos una celda de tipo UITableViewCell y le agregamos el siguiente delegado
 
 ```
@@ -42,9 +42,28 @@ extension MiCelda: GHSimpleTableViewCellDelegate {
     
     // Se castea parametro al modelo de datos seleccionado
     
-        guard let model = model as? SimpleEntity else {
+        guard let model = model as? MiModeloDeDatos else {
             return
         }
+    }
+}
+```
+
+### Paso 5:
+* Para poder utilizar cualquier modelo de datos es necesario agregar una extension al modelo
+* de datos donde colocaremos el identificador de nuestra celda
+
+```
+struct MiModel {
+    
+    let id: String
+    let icon: String
+    let description: String
+}
+
+extension MiModel: GHModelSimpleTableDelegate {
+    var reuseIdentifier: String {
+        SimpleCell.id // Colocamos el identificacior de nuestra celda
     }
 }
 ```
