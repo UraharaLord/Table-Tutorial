@@ -31,3 +31,20 @@ extension Viewcontroller: GHStrategyTableControllerDelegate {
     }
 }
 ```
+
+### Paso 3:
+* Creamos una celda de tipo UITableViewCell y le agregamos el siguiente delegado
+
+```
+extension MiCelda: GHSimpleTableViewCellDelegate {
+
+    func bind(model: GHModelSimpleTableDelegate) {
+    
+    // Se castea parametro al modelo de datos seleccionado
+    
+        guard let model = model as? SimpleEntity else {
+            return
+        }
+    }
+}
+```
