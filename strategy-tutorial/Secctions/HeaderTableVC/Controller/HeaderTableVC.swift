@@ -13,18 +13,11 @@ class HeaderTableVC: UIViewController {
     @IBOutlet weak var containerForTableView: UIView!
     
     internal lazy var tableSectionCpntroller: GHStrategyTableSectionController = {
-        let tableView = GHStrategyTableSectionController(
-            nibList: [
-                (InfoCardCell.id, .main)
-            ]
-        )
-        
-        tableView.delegate = self
-        tableView.cellDelegate = self
-        
+        let tableView = GHStrategyTableSectionController(nibList: [(InfoCardCell.id, .main)])
+            tableView.cellDelegate = self
+            tableView.delegate = self
         return tableView
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +26,6 @@ class HeaderTableVC: UIViewController {
         
         setupView()
     }
-    
     
     func setupView() {
         self.title = "MY Header"
@@ -78,32 +70,18 @@ class HeaderTableVC: UIViewController {
 
 extension HeaderTableVC: GHStrategyTableControllerDelegate {
     func itemSelected(model: GHModelSimpleTableDelegate) {
-//        guard let model = model as? AppointmentModel else { return }
-//
-//        if model.statusId == .Finalizada || model.statusId == .Cancelada {
-//            SMAppointmentCoordinator.goToRateExperience(
-//                manager: self.controllerManager,
-//                model: model,
-//                params: self.bundle
-//            )
-//        }
-//        else {
-//            SMAppointmentCoordinator.goToAppointmentDetail(
-//                manager: self.controllerManager,
-//                model.id
-//            )
-//        }
+        guard let model = model as? MyModelRow else { return }
+        
+        dump("esta es la card seleccionada")
+        dump(model.description ?? "")
+        
+        simpleAlert(title: "Atención", message: model.description ?? "")
     }
 }
 
 extension HeaderTableVC: GHStrategyTableViewCellDelegate {
     func tapView(identifier: Int, data: Any?) {
-//        guard data is AppointmentModel else { return }
-//
-//        SMAppointmentCoordinator.startNotificationFlow(
-//            manager: self.controllerManager,
-//            params: self.bundle
-//        )
+        dump("este es el header")
     }
 }
 

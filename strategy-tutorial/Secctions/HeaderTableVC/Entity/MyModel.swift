@@ -30,7 +30,7 @@ struct MyModelRow {
         for (index, _) in (1...10).enumerated() {
             miModel.append(MyModelRow(id: "\(index)",
                                     icon: urlStr,
-                             description: "Elemento número \(index)"))
+                             description: "Selccionaste la card número \(index)"))
         }
                 
         array.append(ModelSection(titleSection: "Mi header seccion 1", listSection: miModel))
@@ -38,7 +38,7 @@ struct MyModelRow {
         for (index, _) in (1...10).enumerated() {
             miModel.append(MyModelRow(id: "\(index)",
                                     icon: urlStr,
-                             description: "Elemento número \(index)"))
+                             description: "Selccionaste la card número \(index)"))
         }
                 
         array.append(ModelSection(titleSection: "Mi header seccion 2", listSection: miModel))

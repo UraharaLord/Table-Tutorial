@@ -16,6 +16,8 @@
 		6DCC62282A1C83F700B212C5 /* InfoCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC62262A1C83F700B212C5 /* InfoCardCell.swift */; };
 		6DCC62292A1C83F700B212C5 /* InfoCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DCC62272A1C83F700B212C5 /* InfoCardCell.xib */; };
 		6DCC622C2A1C956600B212C5 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC622B2A1C956600B212C5 /* MyModel.swift */; };
+		6DCC622E2A1C9D0000B212C5 /* ColapseTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC622D2A1C9D0000B212C5 /* ColapseTableVC.swift */; };
+		6DCC62322A1C9D2300B212C5 /* ColapseTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DCC62312A1C9D2300B212C5 /* ColapseTable.storyboard */; };
 		6DEC2F052A13F4B70049E580 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEC2F042A13F4B70049E580 /* HomeVC.swift */; };
 		6DEC2F082A13F5880049E580 /* SimpleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEC2F072A13F5880049E580 /* SimpleTableVC.swift */; };
 		6DEC2F0C2A13F6590049E580 /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEC2F0A2A13F6590049E580 /* SimpleCell.swift */; };
@@ -42,6 +44,8 @@
 		6DCC62262A1C83F700B212C5 /* InfoCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardCell.swift; sourceTree = "<group>"; };
 		6DCC62272A1C83F700B212C5 /* InfoCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCardCell.xib; sourceTree = "<group>"; };
 		6DCC622B2A1C956600B212C5 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
+		6DCC622D2A1C9D0000B212C5 /* ColapseTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColapseTableVC.swift; sourceTree = "<group>"; };
+		6DCC62312A1C9D2300B212C5 /* ColapseTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColapseTable.storyboard; sourceTree = "<group>"; };
 		6DEC2F042A13F4B70049E580 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6DEC2F072A13F5880049E580 /* SimpleTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableVC.swift; sourceTree = "<group>"; };
 		6DEC2F0A2A13F6590049E580 /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
@@ -175,6 +179,22 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		6DCC622F2A1C9D0F00B212C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6DCC622D2A1C9D0000B212C5 /* ColapseTableVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6DCC62302A1C9D1100B212C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6DCC62312A1C9D2300B212C5 /* ColapseTable.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6DEC2F062A13F5620049E580 /* SimpleTableVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +261,8 @@
 		6DF3289C2A167D5600D6EB8E /* ColapseTableVC */ = {
 			isa = PBXGroup;
 			children = (
+				6DCC62302A1C9D1100B212C5 /* View */,
+				6DCC622F2A1C9D0F00B212C5 /* Controller */,
 			);
 			path = ColapseTableVC;
 			sourceTree = "<group>";
@@ -343,6 +365,7 @@
 				6D2399EF29EDD57800C12C0D /* LaunchScreen.storyboard in Resources */,
 				6DEC2F0D2A13F6590049E580 /* SimpleCell.xib in Resources */,
 				6D2399EC29EDD57800C12C0D /* Assets.xcassets in Resources */,
+				6DCC62322A1C9D2300B212C5 /* ColapseTable.storyboard in Resources */,
 				6D2399EA29EDD57700C12C0D /* Main.storyboard in Resources */,
 				6DEC2F0F2A13F7020049E580 /* SimpleList.storyboard in Resources */,
 			);
@@ -356,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DF3289B2A15E6B600D6EB8E /* UIViewController+Extension.swift in Sources */,
+				6DCC622E2A1C9D0000B212C5 /* ColapseTableVC.swift in Sources */,
 				6D2399E329EDD57700C12C0D /* AppDelegate.swift in Sources */,
 				6DF329EF2A1C1CD100D6EB8E /* HeaderTableVC.swift in Sources */,
 				6DF328982A15D10800D6EB8E /* UIImage+Extension.swift in Sources */,
