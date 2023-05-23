@@ -25,4 +25,8 @@ class HomeVC: UIViewController {
             self.present(vctrl, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func headerTable(_ sender: Any) {
+        navigateTo(identifier: "HeaderTableID", method: .present, storyboard: "HeaderTable")
+    }
 }
