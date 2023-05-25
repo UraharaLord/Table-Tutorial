@@ -1,0 +1,480 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios16.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ghmjolnircore
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
+import Foundation
+import Foundation/*.Bundle*/
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@_exported import ghmjolnircore
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static var id: Swift.String {
+    get
+  }
+}
+public protocol GHNetflixTableViewCellDelegate {
+  var genericCollectionView: ghmjolnircore.GHStrategyCollectionController { get set }
+  func bind(model: ghmjolnircore.GHModelNetflixTableDelegate)
+  func bind(model: ghmjolnircore.GHModelNetflixTableDelegate, delegate: ghmjolnircore.GHStrategyCollectionControllerDelegate?, section: Swift.Int)
+}
+extension ghmjolnircore.GHNetflixTableViewCellDelegate where Self : UIKit.UITableViewCell {
+  public func bind(model: ghmjolnircore.GHModelNetflixTableDelegate)
+  public func bind(model: ghmjolnircore.GHModelNetflixTableDelegate, delegate: ghmjolnircore.GHStrategyCollectionControllerDelegate?, section: Swift.Int)
+}
+public protocol GHStrategyTableSectionSwipeControllerDelegate : ghmjolnircore.GHStrategyTableControllerDelegate {
+  func modelSwipeSelected(model: ghmjolnircore.GHModelSimpleTableDelegate, position: Swift.Int)
+  func canEditRowAt(model: ghmjolnircore.GHModelSimpleTableDelegate, position: Swift.Int) -> Swift.Bool
+}
+extension ghmjolnircore.GHStrategyTableSectionSwipeControllerDelegate {
+  public func canEditRowAt(model: ghmjolnircore.GHModelSimpleTableDelegate, position: Swift.Int) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class GHStrategyTableSectionSwipeController : ghmjolnircore.GHStrategyTableSectionController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: Foundation.IndexPath) -> UIKit.UISwipeActionsConfiguration?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, canEditRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) override public init(nibList: [(Swift.String, Foundation.Bundle)])
+  @objc deinit
+}
+public struct GHModuleBundle {
+  public static func getBundle(bundleName: Swift.String, classFind: Swift.AnyClass) -> Foundation.Bundle
+}
+public protocol GHModelCollectionDelegate {
+  var reuseCollectionIdentifier: Swift.String { get }
+  var sizeForItem: CoreFoundation.CGSize { get }
+  func collectionView(collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> ghmjolnircore.GHCollectionViewCellDelegate?
+}
+extension ghmjolnircore.GHModelCollectionDelegate {
+  public var sizeForItem: CoreFoundation.CGSize {
+    get
+  }
+  public func collectionView(collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> ghmjolnircore.GHCollectionViewCellDelegate?
+}
+public protocol GHStrategyCollectionControllerDelegate : AnyObject {
+  func itemSelected(model: ghmjolnircore.GHModelCollectionDelegate)
+}
+public protocol GHStrategyCollectionViewCellDelegate : AnyObject {
+  func tapView(identifier: Swift.Int, data: Any?)
+}
+public protocol GHStrategyStringValueDelegate : AnyObject {
+  var stringValue: Swift.String { get }
+}
+public typealias SSRVGestureHandler = (_ gesture: UIKit.UIGestureRecognizer) -> Swift.Bool
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class SwiftyStarRatingView : UIKit.UIControl {
+  @_Concurrency.MainActor(unsafe) public var shouldBecomeFirstResponder: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var shouldBeginGestureHandler: ghmjolnircore.SSRVGestureHandler!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var minimumValue: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var maximumValue: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var value: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public func observe<Value>(_ keyPath: Swift.KeyPath<ghmjolnircore.SwiftyStarRatingView, Value>, options: Foundation.NSKeyValueObservingOptions, changeHandler: @escaping (ghmjolnircore.SwiftyStarRatingView, Foundation.NSKeyValueObservedChange<Value>) -> Swift.Void) -> Foundation.NSKeyValueObservation
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var spacing: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var continuous: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var allowsHalfStars: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var accurateHalfStars: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var emptyStarImage: UIKit.UIImage?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var halfStarImage: UIKit.UIImage?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var filledStarImage: UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var isEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var canBecomeFirstResponder: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension ghmjolnircore.SwiftyStarRatingView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func beginTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func continueTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func cancelTracking(with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+extension ghmjolnircore.SwiftyStarRatingView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func accessibilityActivate() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func accessibilityIncrement()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func accessibilityDecrement()
+}
+@_hasMissingDesignatedInitializers final public class GHCacheImage {
+  public static var shared: ghmjolnircore.GHCacheImage {
+    get
+  }
+  final public func releaseCache()
+  final public func setCacheAsset(model: ghmjolnircore.GHCacheImageDelegate, imageView: UIKit.UIImageView, poiner: @escaping (ghmjolnircore.GHCacheImageDelegate, UIKit.UIImage?) -> Swift.Bool)
+  final public func setSimpleCacheAsset(urlStr: Swift.String, closurePointer: @escaping (UIKit.UIImage?) -> ())
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class GHStrategyTableSectionController : UIKit.UITableViewController {
+  public typealias ViewListener = (Swift.String) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ghmjolnircore.GHStrategyTableControllerDelegate?
+  @_Concurrency.MainActor(unsafe) weak public var cellDelegate: ghmjolnircore.GHStrategyTableViewCellDelegate?
+  @_Concurrency.MainActor(unsafe) public init(nibList: [(Swift.String, Foundation.Bundle)])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public func setSource(listSource: [ghmjolnircore.GHModelTableSectionDelegate])
+  @_Concurrency.MainActor(unsafe) public func setFilterSource(closure: ([ghmjolnircore.GHModelTableSectionDelegate]?) -> [ghmjolnircore.GHModelTableSectionDelegate]?)
+  @_Concurrency.MainActor(unsafe) public func getSource() -> [ghmjolnircore.GHModelTableSectionDelegate]?
+  @_Concurrency.MainActor(unsafe) public func setSectionView(heightSection: CoreFoundation.CGFloat, viewSection: @escaping ghmjolnircore.GHStrategyTableSectionController.ViewListener)
+  @_Concurrency.MainActor(unsafe) public func scrollToBotton(animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func scrollToLastRow(animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func addRefreshControl()
+  @_Concurrency.MainActor(unsafe) public func endRefreshing()
+  @_Concurrency.MainActor(unsafe) public func removeReferenceContext()
+  @objc deinit
+}
+extension UIKit.UIColor {
+  convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int, alpha: CoreFoundation.CGFloat = 1.0)
+  convenience public init(rgb: Swift.Int)
+}
+public class GHLiveData<T> {
+  public typealias Listener = (T) -> ()
+  public var value: T {
+    get
+    set
+  }
+  public init(_ v: T)
+  @objc deinit
+  public func bind(_ listener: ghmjolnircore.GHLiveData<T>.Listener?)
+  public func bindAndFire(_ listener: ghmjolnircore.GHLiveData<T>.Listener?)
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor(unsafe) public func hasRowAtIndexPath(indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func scrollToTop(animated: Swift.Bool = false)
+}
+@objc @_Concurrency.MainActor(unsafe) public class GHStrategyCollectionController : UIKit.UICollectionViewController, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) weak public var collectionDelegate: ghmjolnircore.GHStrategyCollectionControllerDelegate?
+  @_Concurrency.MainActor(unsafe) weak public var collectionViewCellDelegate: ghmjolnircore.GHStrategyCollectionViewCellDelegate?
+  @_Concurrency.MainActor(unsafe) public init(nibList: [(Swift.String, Foundation.Bundle)], direction: UIKit.UICollectionView.ScrollDirection? = nil, minimumLineSpacing: CoreFoundation.CGFloat = 0.0)
+  @_Concurrency.MainActor(unsafe) required public init(direction: UIKit.UICollectionView.ScrollDirection? = nil)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) public func setSource(list: [ghmjolnircore.GHModelCollectionDelegate], section: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setFilterSource(closure: ([ghmjolnircore.GHModelCollectionDelegate]?) -> [ghmjolnircore.GHModelCollectionDelegate]?)
+  @_Concurrency.MainActor(unsafe) public func getDataSource() -> [ghmjolnircore.GHModelCollectionDelegate]?
+  @_Concurrency.MainActor(unsafe) public func removeReferenceContext()
+  @objc deinit
+}
+public protocol GHBaseViewModelProtocol {
+  @available(iOS 13.0, *)
+  func fetchNotNilPublisher<T>(publisher: Combine.AnyPublisher<T, Swift.Error>?) -> Combine.AnyPublisher<T, Swift.Error>
+  func removeReferenceContext()
+}
+extension ghmjolnircore.GHBaseViewModelProtocol {
+  @available(iOS 13.0, *)
+  public func fetchNotNilPublisher<T>(publisher: Combine.AnyPublisher<T, Swift.Error>?) -> Combine.AnyPublisher<T, Swift.Error>
+}
+public protocol GHBaseCoordinatorProtocol {
+}
+public enum HorizontalAlignment {
+  case left
+  case right
+  case leading
+  case trailing
+  case justified
+  public static func == (a: ghmjolnircore.HorizontalAlignment, b: ghmjolnircore.HorizontalAlignment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum VerticalAlignment {
+  case top
+  case center
+  case bottom
+  public static func == (a: ghmjolnircore.VerticalAlignment, b: ghmjolnircore.VerticalAlignment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_Concurrency.MainActor(unsafe) open class AlignedCollectionViewFlowLayout : UIKit.UICollectionViewFlowLayout {
+  @_Concurrency.MainActor(unsafe) public var horizontalAlignment: ghmjolnircore.HorizontalAlignment
+  @_Concurrency.MainActor(unsafe) public var verticalAlignment: ghmjolnircore.VerticalAlignment
+  @_Concurrency.MainActor(unsafe) public init(horizontalAlignment: ghmjolnircore.HorizontalAlignment = .justified, verticalAlignment: ghmjolnircore.VerticalAlignment = .center)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutAttributesForItem(at indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewLayoutAttributes?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutAttributesForElements(in rect: CoreFoundation.CGRect) -> [UIKit.UICollectionViewLayoutAttributes]?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GHAppUtility {
+  public static func lockOrientation(_ orientation: UIKit.UIInterfaceOrientationMask)
+  public static func lockOrientation(_ orientation: UIKit.UIInterfaceOrientationMask, andRotateTo rotateOrientation: UIKit.UIInterfaceOrientation)
+  @objc deinit
+}
+public protocol GHStrategyTableControllerDelegate : AnyObject {
+  func itemSelected(model: ghmjolnircore.GHModelSimpleTableDelegate)
+  func scrollViewDidScroll(scrollView: UIKit.UIScrollView)
+  func deselectAfterSelectRow() -> Swift.Bool
+  func scrollFinishInBottomList()
+  func fetchRefreshData()
+}
+extension ghmjolnircore.GHStrategyTableControllerDelegate {
+  public func scrollViewDidScroll(scrollView: UIKit.UIScrollView)
+  public func deselectAfterSelectRow() -> Swift.Bool
+  public func scrollFinishInBottomList()
+  public func fetchRefreshData()
+}
+public protocol GHStrategyTableViewCellDelegate : AnyObject {
+  func tapView(identifier: Swift.Int, data: Any?)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class GHStrategyTableController : UIKit.UITableViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ghmjolnircore.GHStrategyTableControllerDelegate?
+  @_Concurrency.MainActor(unsafe) weak public var cellDelegate: ghmjolnircore.GHStrategyTableViewCellDelegate?
+  @_Concurrency.MainActor(unsafe) public init(nibList: [(Swift.String, Foundation.Bundle)])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, canFocusRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) public func setSource(listSource: [ghmjolnircore.GHModelSimpleTableDelegate])
+  @_Concurrency.MainActor(unsafe) public func setFilterSource(closure: ([ghmjolnircore.GHModelSimpleTableDelegate]?) -> [ghmjolnircore.GHModelSimpleTableDelegate]?)
+  @_Concurrency.MainActor(unsafe) public func getSource() -> [ghmjolnircore.GHModelSimpleTableDelegate]?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) public func addRefreshControl()
+  @_Concurrency.MainActor(unsafe) public func endRefreshing()
+  @_Concurrency.MainActor(unsafe) public func removeReferenceContext()
+  @objc deinit
+}
+public protocol GHStrategyNetflixTableSectionControllerDelegate : AnyObject {
+  func sectionDisplay(section: Swift.Int, model: ghmjolnircore.GHModelNetflixTableDelegate)
+  func modelSelected(model: ghmjolnircore.GHModelNetflixTableDelegate, position: Swift.Int)
+  func fetchRefreshData()
+}
+extension ghmjolnircore.GHStrategyNetflixTableSectionControllerDelegate {
+  public func sectionDisplay(section: Swift.Int, model: ghmjolnircore.GHModelNetflixTableDelegate)
+  public func modelSelected(model: ghmjolnircore.GHModelNetflixTableDelegate, position: Swift.Int)
+  public func fetchRefreshData()
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class GHStrategyNetflixTableSectionController : UIKit.UITableViewController {
+  @_Concurrency.MainActor(unsafe) weak public var itemDelegate: ghmjolnircore.GHStrategyCollectionControllerDelegate?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ghmjolnircore.GHStrategyNetflixTableSectionControllerDelegate?
+  public typealias ViewListener = (Swift.String) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) public init(nibList: [(Swift.String, Foundation.Bundle)])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, canFocusRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public func setSource(listSource: [ghmjolnircore.GHModelNetflixTableDelegate])
+  @_Concurrency.MainActor(unsafe) public func setFilterSource(closure: ([ghmjolnircore.GHModelNetflixTableDelegate]?) -> [ghmjolnircore.GHModelNetflixTableDelegate]?)
+  @_Concurrency.MainActor(unsafe) public func getSource() -> [ghmjolnircore.GHModelNetflixTableDelegate]?
+  @_Concurrency.MainActor(unsafe) public func setSectionView(heightSection: CoreFoundation.CGFloat, viewSection: @escaping ghmjolnircore.GHStrategyNetflixTableSectionController.ViewListener)
+  @_Concurrency.MainActor(unsafe) public func addRefreshControl()
+  @_Concurrency.MainActor(unsafe) public func endRefreshing()
+  @objc deinit
+}
+public protocol GHCacheImageDelegate {
+  var urlImage: Swift.String { get }
+}
+public protocol GHModelNetflixTableDelegate {
+  var titleSection: Swift.String { get set }
+  var reuseIdentifier: Swift.String { get }
+  var heightForRow: CoreFoundation.CGFloat { get }
+  func cellForTableView(tableView: UIKit.UITableView, atIndexPath: Foundation.IndexPath) -> ghmjolnircore.GHNetflixTableViewCellDelegate?
+}
+extension ghmjolnircore.GHModelNetflixTableDelegate {
+  public var heightForRow: CoreFoundation.CGFloat {
+    get
+  }
+  public func cellForTableView(tableView: UIKit.UITableView, atIndexPath: Foundation.IndexPath) -> ghmjolnircore.GHNetflixTableViewCellDelegate?
+}
+public protocol GHStrategyTableSwipeControllerDelegate : ghmjolnircore.GHStrategyTableControllerDelegate {
+  func modelSwipeSelected(model: ghmjolnircore.GHModelSimpleTableDelegate, position: Swift.Int)
+  func canEditRowAt(model: ghmjolnircore.GHModelSimpleTableDelegate, position: Swift.Int) -> Swift.Bool
+}
+extension ghmjolnircore.GHStrategyTableSwipeControllerDelegate {
+  public func canEditRowAt(model: ghmjolnircore.GHModelSimpleTableDelegate, position: Swift.Int) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class GHStrategyTableSwipeController : ghmjolnircore.GHStrategyTableController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: Foundation.IndexPath) -> UIKit.UISwipeActionsConfiguration?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, canEditRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) override public init(nibList: [(Swift.String, Foundation.Bundle)])
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class GHStrategyChipCollectionController : UIKit.UICollectionViewController, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) weak public var collectionDelegate: ghmjolnircore.GHStrategyCollectionControllerDelegate?
+  @_Concurrency.MainActor(unsafe) weak public var collectionViewCellDelegate: ghmjolnircore.GHStrategyCollectionViewCellDelegate?
+  @_Concurrency.MainActor(unsafe) public init(nibList: [(Swift.String, Foundation.Bundle)], direction: UIKit.UICollectionView.ScrollDirection? = nil)
+  @_Concurrency.MainActor(unsafe) required public init(direction: UIKit.UICollectionView.ScrollDirection? = nil)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) public func setSource(list: [ghmjolnircore.GHModelCollectionDelegate], section: Swift.Int = 0)
+  @_Concurrency.MainActor(unsafe) public func setFilterSource(closure: ([ghmjolnircore.GHModelCollectionDelegate]?) -> [ghmjolnircore.GHModelCollectionDelegate]?)
+  @_Concurrency.MainActor(unsafe) public func getDataSource() -> [ghmjolnircore.GHModelCollectionDelegate]?
+  @_Concurrency.MainActor(unsafe) public func removeReferenceContext()
+  @objc deinit
+}
+public protocol GHModelSimpleTableDelegate {
+  var reuseIdentifier: Swift.String { get }
+  var heightForRow: CoreFoundation.CGFloat { get }
+  var swipeConfigList: [(titleSwipe: Swift.String?, imageSwipe: UIKit.UIImage?, backgroundColor: UIKit.UIColor?)]? { get }
+  func cellForTableView(tableView: UIKit.UITableView, atIndexPath: Foundation.IndexPath) -> ghmjolnircore.GHSimpleTableViewCellDelegate?
+}
+extension ghmjolnircore.GHModelSimpleTableDelegate {
+  public var heightForRow: CoreFoundation.CGFloat {
+    get
+  }
+  public var swipeConfigList: [(titleSwipe: Swift.String?, imageSwipe: UIKit.UIImage?, backgroundColor: UIKit.UIColor?)]? {
+    get
+  }
+  public func cellForTableView(tableView: UIKit.UITableView, atIndexPath: Foundation.IndexPath) -> ghmjolnircore.GHSimpleTableViewCellDelegate?
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class GHChipViewFlowLayout : UIKit.UICollectionViewFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutAttributesForElements(in rect: CoreFoundation.CGRect) -> [UIKit.UICollectionViewLayoutAttributes]?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum GHPublisherError : Swift.Error {
+  case nilReference
+  public static func == (a: ghmjolnircore.GHPublisherError, b: ghmjolnircore.GHPublisherError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol GHSimpleTableViewCellDelegate {
+  func bind(model: ghmjolnircore.GHModelSimpleTableDelegate)
+  func bind(model: ghmjolnircore.GHModelSimpleTableDelegate, cellDelegate: ghmjolnircore.GHStrategyTableViewCellDelegate?)
+}
+extension ghmjolnircore.GHSimpleTableViewCellDelegate {
+  public func bind(model: ghmjolnircore.GHModelSimpleTableDelegate)
+  public func bind(model: ghmjolnircore.GHModelSimpleTableDelegate, cellDelegate: ghmjolnircore.GHStrategyTableViewCellDelegate?)
+}
+public protocol GHCollectionViewCellDelegate {
+  func bind(model: ghmjolnircore.GHModelCollectionDelegate)
+  func bind(model: ghmjolnircore.GHModelCollectionDelegate, cellDelegate: ghmjolnircore.GHStrategyCollectionViewCellDelegate?)
+}
+extension ghmjolnircore.GHCollectionViewCellDelegate {
+  public func bind(model: ghmjolnircore.GHModelCollectionDelegate)
+  public func bind(model: ghmjolnircore.GHModelCollectionDelegate, cellDelegate: ghmjolnircore.GHStrategyCollectionViewCellDelegate?)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func roundCorners(corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func constraints(to childView: UIKit.UIView, constant: CoreFoundation.CGFloat = 0.0)
+  @_Concurrency.MainActor(unsafe) public func constraintsLeft(to childView: UIKit.UIView, constant: CoreFoundation.CGFloat = 0.0)
+  @_Concurrency.MainActor(unsafe) public func constraintsLeftTop(to childView: UIKit.UIView, constantLeft: CoreFoundation.CGFloat = 0.0, constantTop: CoreFoundation.CGFloat = 0.0)
+}
+public protocol GHBaseViewControllerDelegate : AnyObject {
+  var bundle: ghmjolnircore.GHBundleParameters? { get set }
+  var controllerType: Swift.Int? { get set }
+  var controllerManager: ghmjolnircore.GHManagerController? { get set }
+  var viewModel: ghmjolnircore.GHBaseViewModelProtocol? { get set }
+  static func instantiate(fromStoryboard nibName: Swift.String, bundle: Foundation.Bundle) -> Self
+  func removeReferenceContext()
+}
+extension ghmjolnircore.GHBaseViewControllerDelegate where Self : UIKit.UIViewController {
+  public static func instantiate(fromStoryboard nibName: Swift.String, bundle: Foundation.Bundle = .main) -> Self
+  public func removeReferenceContext()
+}
+public class GHBundleParameters {
+  public var _params: [Swift.String : Any?] {
+    get
+    set
+  }
+  public init()
+  public func add(_ value: Any?, key: Swift.String)
+  public func getInt(_ key: Swift.String) -> Swift.Int
+  public func getString(_ key: Swift.String) -> Swift.String
+  public func getBool(_ key: Swift.String) -> Swift.Bool
+  public func get<T>(_ key: Swift.String) -> T?
+  public func releaseSource()
+  @objc deinit
+}
+extension UIKit.UITextField {
+  @_Concurrency.MainActor(unsafe) public func setUnderLine(color: UIKit.UIColor = .lightGray)
+}
+public class GHManagerController {
+  public init(navBar: UIKit.UINavigationController)
+  public func setNavBarHiden(hidden: Swift.Bool)
+  public func hideViewController(animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  public func presentDangerNavigationViewController(type: Swift.Int)
+  public func presentRootNavigationViewController(managerModel: ghmjolnircore.GHManagerModel, parameters: ghmjolnircore.GHBundleParameters? = nil, completion: (() -> Swift.Void)? = nil)
+  public func presentNavigationViewController(managerModel: ghmjolnircore.GHManagerModel, parameters: ghmjolnircore.GHBundleParameters? = nil, viewModel: ghmjolnircore.GHBaseViewModelProtocol? = nil, completion: (() -> Swift.Void)? = nil, animated: Swift.Bool = true)
+  public func presentSheetViewController(managerModel: ghmjolnircore.GHManagerModel, parameters: ghmjolnircore.GHBundleParameters? = nil, viewModel: ghmjolnircore.GHBaseViewModelProtocol? = nil, completion: (() -> Swift.Void)? = nil)
+  public func getLastVcPresented() -> (type: Swift.Int, ctrDel: ghmjolnircore.GHBaseViewControllerDelegate?)?
+  public func getPenultimateVcPresented() -> (type: Swift.Int, ctrDel: ghmjolnircore.GHBaseViewControllerDelegate?)?
+  public func releaseVcFromName(type: Swift.Int)
+  @objc deinit
+}
+public protocol GHAppDelegate {
+  var orientationLock: UIKit.UIInterfaceOrientationMask { get set }
+}
+public protocol GHModelTableSectionDelegate {
+  var titleSection: Swift.String? { get set }
+  var listSection: [ghmjolnircore.GHModelSimpleTableDelegate]? { get set }
+}
+public protocol GHManagerModelDelegate {
+  func getController() -> ghmjolnircore.GHBaseViewControllerDelegate?
+  func getViewModel() -> ghmjolnircore.GHBaseViewModelProtocol?
+}
+@_hasMissingDesignatedInitializers public class GHManagerModel {
+  public var type: Swift.Int?
+  public var bundle: Foundation.Bundle?
+  public var delegate: ghmjolnircore.GHManagerModelDelegate?
+  @objc deinit
+}
+public class GHManagerModelBuilder {
+  public init()
+  public func withType(type: Swift.Int) -> ghmjolnircore.GHManagerModelBuilder
+  public func withDelegate(delegate: ghmjolnircore.GHManagerModelDelegate) -> ghmjolnircore.GHManagerModelBuilder
+  public func withBundle(bundle: Foundation.Bundle) -> ghmjolnircore.GHManagerModelBuilder
+  public func build() -> ghmjolnircore.GHManagerModel
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GHScrollDictionary {
+  public static var sharedInstance: ghmjolnircore.GHScrollDictionary {
+    get
+  }
+  public func get<T>(_ key: Swift.Int) -> T?
+  @objc deinit
+}
+extension ghmjolnircore.HorizontalAlignment : Swift.Equatable {}
+extension ghmjolnircore.HorizontalAlignment : Swift.Hashable {}
+extension ghmjolnircore.VerticalAlignment : Swift.Equatable {}
+extension ghmjolnircore.VerticalAlignment : Swift.Hashable {}
+extension ghmjolnircore.GHPublisherError : Swift.Equatable {}
+extension ghmjolnircore.GHPublisherError : Swift.Hashable {}

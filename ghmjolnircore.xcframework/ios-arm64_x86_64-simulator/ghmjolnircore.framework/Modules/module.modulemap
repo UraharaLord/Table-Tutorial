@@ -1,0 +1,11 @@
+framework module ghmjolnircore {
+  umbrella header "ghmjolnircore.h"
+
+  export *
+  module * { export * }
+}
+
+module ghmjolnircore.Swift {
+  header "ghmjolnircore-Swift.h"
+  requires objc
+}

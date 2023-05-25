@@ -18,19 +18,32 @@
 		6DCC622C2A1C956600B212C5 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC622B2A1C956600B212C5 /* MyModel.swift */; };
 		6DCC622E2A1C9D0000B212C5 /* ColapseTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC622D2A1C9D0000B212C5 /* ColapseTableVC.swift */; };
 		6DCC62322A1C9D2300B212C5 /* ColapseTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DCC62312A1C9D2300B212C5 /* ColapseTable.storyboard */; };
+		6DCC63E72A1FCEF900B212C5 /* ghmjolnircore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC63E62A1FCEF900B212C5 /* ghmjolnircore.xcframework */; };
 		6DEC2F052A13F4B70049E580 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEC2F042A13F4B70049E580 /* HomeVC.swift */; };
 		6DEC2F082A13F5880049E580 /* SimpleTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEC2F072A13F5880049E580 /* SimpleTableVC.swift */; };
 		6DEC2F0C2A13F6590049E580 /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEC2F0A2A13F6590049E580 /* SimpleCell.swift */; };
 		6DEC2F0D2A13F6590049E580 /* SimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DEC2F0B2A13F6590049E580 /* SimpleCell.xib */; };
 		6DEC2F0F2A13F7020049E580 /* SimpleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DEC2F0E2A13F7020049E580 /* SimpleList.storyboard */; };
 		6DEC2F142A13F8120049E580 /* SimpleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEC2F132A13F8120049E580 /* SimpleEntity.swift */; };
-		6DEC2F172A1418770049E580 /* ghmjolnircore in Frameworks */ = {isa = PBXBuildFile; productRef = 6DEC2F162A1418770049E580 /* ghmjolnircore */; };
 		6DF328942A15CC4300D6EB8E /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 6DF328932A15CC4300D6EB8E /* TinyConstraints */; };
 		6DF328982A15D10800D6EB8E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF328972A15D10800D6EB8E /* UIImage+Extension.swift */; };
 		6DF3289B2A15E6B600D6EB8E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3289A2A15E6B600D6EB8E /* UIViewController+Extension.swift */; };
 		6DF329EF2A1C1CD100D6EB8E /* HeaderTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF329EE2A1C1CD100D6EB8E /* HeaderTableVC.swift */; };
 		6DF329F12A1C801D00D6EB8E /* HeaderTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DF329F02A1C801D00D6EB8E /* HeaderTable.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DCC63E42A1FC42E00B212C5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6D2399DF29EDD57700C12C0D /* strategy-tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "strategy-tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +59,7 @@
 		6DCC622B2A1C956600B212C5 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		6DCC622D2A1C9D0000B212C5 /* ColapseTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColapseTableVC.swift; sourceTree = "<group>"; };
 		6DCC62312A1C9D2300B212C5 /* ColapseTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColapseTable.storyboard; sourceTree = "<group>"; };
+		6DCC63E62A1FCEF900B212C5 /* ghmjolnircore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ghmjolnircore.xcframework; sourceTree = "<group>"; };
 		6DEC2F042A13F4B70049E580 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6DEC2F072A13F5880049E580 /* SimpleTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableVC.swift; sourceTree = "<group>"; };
 		6DEC2F0A2A13F6590049E580 /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
@@ -64,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DEC2F172A1418770049E580 /* ghmjolnircore in Frameworks */,
 				6DF328942A15CC4300D6EB8E /* TinyConstraints in Frameworks */,
+				6DCC63E72A1FCEF900B212C5 /* ghmjolnircore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +89,10 @@
 		6D2399D629EDD57700C12C0D = {
 			isa = PBXGroup;
 			children = (
+				6DCC63E62A1FCEF900B212C5 /* ghmjolnircore.xcframework */,
 				6D2399E129EDD57700C12C0D /* strategy-tutorial */,
 				6D2399E029EDD57700C12C0D /* Products */,
+				6DCC63E12A1FC42D00B212C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +121,7 @@
 			children = (
 				6D2399E829EDD57700C12C0D /* Main.storyboard */,
 				6D239A0729EDDF5600C12C0D /* Home */,
+				6DCC62332A1CA01800B212C5 /* NetflixTableVC */,
 				6DEC2F062A13F5620049E580 /* SimpleTableVC */,
 				6DF329ED2A1C1CA900D6EB8E /* HeaderTableVC */,
 				6DF3289C2A167D5600D6EB8E /* ColapseTableVC */,
@@ -193,6 +210,76 @@
 				6DCC62312A1C9D2300B212C5 /* ColapseTable.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6DCC62332A1CA01800B212C5 /* NetflixTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				6DCC62362A1CA04900B212C5 /* Entity */,
+				6DCC62352A1CA03F00B212C5 /* View */,
+				6DCC62342A1CA03C00B212C5 /* Controller */,
+			);
+			path = NetflixTableVC;
+			sourceTree = "<group>";
+		};
+		6DCC62342A1CA03C00B212C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6DCC62372A1CA05C00B212C5 /* Cells */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6DCC62352A1CA03F00B212C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6DCC62362A1CA04900B212C5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6DCC62372A1CA05C00B212C5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6DCC62392A1CA06D00B212C5 /* Header */,
+				6DCC623A2A1CA07B00B212C5 /* Section */,
+				6DCC62382A1CA06A00B212C5 /* Collection */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6DCC62382A1CA06A00B212C5 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		6DCC62392A1CA06D00B212C5 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		6DCC623A2A1CA07B00B212C5 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		6DCC63E12A1FC42D00B212C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6DEC2F062A13F5620049E580 /* SimpleTableVC */ = {
@@ -304,6 +391,7 @@
 				6D2399DB29EDD57700C12C0D /* Sources */,
 				6D2399DC29EDD57700C12C0D /* Frameworks */,
 				6D2399DD29EDD57700C12C0D /* Resources */,
+				6DCC63E42A1FC42E00B212C5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,7 +399,6 @@
 			);
 			name = "strategy-tutorial";
 			packageProductDependencies = (
-				6DEC2F162A1418770049E580 /* ghmjolnircore */,
 				6DF328932A15CC4300D6EB8E /* TinyConstraints */,
 			);
 			productName = "strategy-tutorial";
@@ -343,7 +430,6 @@
 			);
 			mainGroup = 6D2399D629EDD57700C12C0D;
 			packageReferences = (
-				6DEC2F152A1418770049E580 /* XCRemoteSwiftPackageReference "ghmjolnircore" */,
 				6DF328922A15CC4300D6EB8E /* XCRemoteSwiftPackageReference "TinyConstraints" */,
 			);
 			productRefGroup = 6D2399E029EDD57700C12C0D /* Products */;
@@ -610,14 +696,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6DEC2F152A1418770049E580 /* XCRemoteSwiftPackageReference "ghmjolnircore" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://git.gonet.us/gnglobaldependencies/ios/ui/ghmjolnircore.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		6DF328922A15CC4300D6EB8E /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/roberthein/TinyConstraints";
@@ -629,11 +707,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6DEC2F162A1418770049E580 /* ghmjolnircore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6DEC2F152A1418770049E580 /* XCRemoteSwiftPackageReference "ghmjolnircore" */;
-			productName = ghmjolnircore;
-		};
 		6DF328932A15CC4300D6EB8E /* TinyConstraints */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6DF328922A15CC4300D6EB8E /* XCRemoteSwiftPackageReference "TinyConstraints" */;
