@@ -109,29 +109,3 @@ func setDataSource() {
         return tableViewController
     }()
 ```
-
-
-```
-xcodebuild archive \
- -scheme ghmjolnircore \
- -archivePath ~/ghmjolnircore-iphonesimulator.xcarchive \
- -sdk iphonesimulator \
- SKIP_INSTALL=NO \
- BUILD_LIBRARY_FOR_DISTRIBUTION=YES
-
-
-
-xcodebuild archive \
- -scheme ghmjolnircore \
- -archivePath ~/ghmjolnircore-iphoneos.xcarchive \
- -sdk iphoneos \
- SKIP_INSTALL=NO  \
- BUILD_LIBRARY_FOR_DISTRIBUTION=YES
-
-
-
-xcodebuild -create-xcframework \
- -framework ~/ghmjolnircore-iphonesimulator.xcarchive/Products/Library/Frameworks/ghmjolnircore.framework \
- -framework ~/ghmjolnircore-iphoneos.xcarchive/Products/Library/Frameworks/ghmjolnircore.framework \
- -output ~/ghmjolnircore.xcframework
-```
