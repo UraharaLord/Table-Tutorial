@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D12488D2A2E7608003B4A03 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6D12488C2A2E7608003B4A03 /* README.md */; };
+		6D12488E2A2E7637003B4A03 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6DF328992A15D29800D6EB8E /* README.md */; };
+		6D1248902A2F9D21003B4A03 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6D12488F2A2F9D21003B4A03 /* README.md */; };
 		6D2399E329EDD57700C12C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2399E229EDD57700C12C0D /* AppDelegate.swift */; };
 		6D2399E529EDD57700C12C0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2399E429EDD57700C12C0D /* SceneDelegate.swift */; };
 		6D2399EA29EDD57700C12C0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2399E829EDD57700C12C0D /* Main.storyboard */; };
 		6D2399EC29EDD57800C12C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D2399EB29EDD57800C12C0D /* Assets.xcassets */; };
 		6D2399EF29EDD57800C12C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2399ED29EDD57800C12C0D /* LaunchScreen.storyboard */; };
+		6D6C41DC2A26D85700926B26 /* NetflixTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C41DB2A26D85700926B26 /* NetflixTableVC.swift */; };
+		6D6C41DE2A27AA1700926B26 /* NetflixEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C41DD2A27AA1700926B26 /* NetflixEntity.swift */; };
 		6DCC62232A1C83AF00B212C5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC62222A1C83AF00B212C5 /* CustomView.swift */; };
 		6DCC62282A1C83F700B212C5 /* InfoCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC62262A1C83F700B212C5 /* InfoCardCell.swift */; };
 		6DCC62292A1C83F700B212C5 /* InfoCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DCC62272A1C83F700B212C5 /* InfoCardCell.xib */; };
@@ -46,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D12488C2A2E7608003B4A03 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6D12488F2A2F9D21003B4A03 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6D2399DF29EDD57700C12C0D /* strategy-tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "strategy-tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2399E229EDD57700C12C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D2399E429EDD57700C12C0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +60,8 @@
 		6D2399EB29EDD57800C12C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D2399EE29EDD57800C12C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D2399F029EDD57800C12C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D6C41DB2A26D85700926B26 /* NetflixTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixTableVC.swift; sourceTree = "<group>"; };
+		6D6C41DD2A27AA1700926B26 /* NetflixEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixEntity.swift; sourceTree = "<group>"; };
 		6DCC62222A1C83AF00B212C5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		6DCC62262A1C83F700B212C5 /* InfoCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardCell.swift; sourceTree = "<group>"; };
 		6DCC62272A1C83F700B212C5 /* InfoCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCardCell.xib; sourceTree = "<group>"; };
@@ -107,6 +116,7 @@
 		6D2399E129EDD57700C12C0D /* strategy-tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				6D12488F2A2F9D21003B4A03 /* README.md */,
 				6D239A0629EDDF4300C12C0D /* Start */,
 				6D239A0829EDDF7E00C12C0D /* Launch */,
 				6DF328952A15D0E300D6EB8E /* Commons */,
@@ -226,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				6DCC62372A1CA05C00B212C5 /* Cells */,
+				6D6C41DB2A26D85700926B26 /* NetflixTableVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +251,7 @@
 		6DCC62362A1CA04900B212C5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				6D6C41DD2A27AA1700926B26 /* NetflixEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -247,7 +259,7 @@
 		6DCC62372A1CA05C00B212C5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6DCC62392A1CA06D00B212C5 /* Header */,
+				6DCC62392A1CA06D00B212C5 /* Row */,
 				6DCC623A2A1CA07B00B212C5 /* Section */,
 				6DCC62382A1CA06A00B212C5 /* Collection */,
 			);
@@ -261,11 +273,11 @@
 			path = Collection;
 			sourceTree = "<group>";
 		};
-		6DCC62392A1CA06D00B212C5 /* Header */ = {
+		6DCC62392A1CA06D00B212C5 /* Row */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Header;
+			path = Row;
 			sourceTree = "<group>";
 		};
 		6DCC623A2A1CA07B00B212C5 /* Section */ = {
@@ -357,6 +369,7 @@
 		6DF329ED2A1C1CA900D6EB8E /* HeaderTableVC */ = {
 			isa = PBXGroup;
 			children = (
+				6D12488C2A2E7608003B4A03 /* README.md */,
 				6DCC622A2A1C955100B212C5 /* Entity */,
 				6DF329F22A1C80B000D6EB8E /* View */,
 				6DF329F32A1C80B500D6EB8E /* Controller */,
@@ -448,11 +461,14 @@
 			files = (
 				6DCC62292A1C83F700B212C5 /* InfoCardCell.xib in Resources */,
 				6DF329F12A1C801D00D6EB8E /* HeaderTable.storyboard in Resources */,
+				6D12488E2A2E7637003B4A03 /* README.md in Resources */,
 				6D2399EF29EDD57800C12C0D /* LaunchScreen.storyboard in Resources */,
 				6DEC2F0D2A13F6590049E580 /* SimpleCell.xib in Resources */,
 				6D2399EC29EDD57800C12C0D /* Assets.xcassets in Resources */,
 				6DCC62322A1C9D2300B212C5 /* ColapseTable.storyboard in Resources */,
+				6D12488D2A2E7608003B4A03 /* README.md in Resources */,
 				6D2399EA29EDD57700C12C0D /* Main.storyboard in Resources */,
+				6D1248902A2F9D21003B4A03 /* README.md in Resources */,
 				6DEC2F0F2A13F7020049E580 /* SimpleList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +482,7 @@
 			files = (
 				6DF3289B2A15E6B600D6EB8E /* UIViewController+Extension.swift in Sources */,
 				6DCC622E2A1C9D0000B212C5 /* ColapseTableVC.swift in Sources */,
+				6D6C41DC2A26D85700926B26 /* NetflixTableVC.swift in Sources */,
 				6D2399E329EDD57700C12C0D /* AppDelegate.swift in Sources */,
 				6DF329EF2A1C1CD100D6EB8E /* HeaderTableVC.swift in Sources */,
 				6DF328982A15D10800D6EB8E /* UIImage+Extension.swift in Sources */,
@@ -474,6 +491,7 @@
 				6DEC2F142A13F8120049E580 /* SimpleEntity.swift in Sources */,
 				6DCC622C2A1C956600B212C5 /* MyModel.swift in Sources */,
 				6D2399E529EDD57700C12C0D /* SceneDelegate.swift in Sources */,
+				6D6C41DE2A27AA1700926B26 /* NetflixEntity.swift in Sources */,
 				6DEC2F0C2A13F6590049E580 /* SimpleCell.swift in Sources */,
 				6DCC62282A1C83F700B212C5 /* InfoCardCell.swift in Sources */,
 				6DEC2F082A13F5880049E580 /* SimpleTableVC.swift in Sources */,
